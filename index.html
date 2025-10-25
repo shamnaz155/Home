@@ -1,0 +1,195 @@
+<!--
+Single-file responsive portfolio website for SHAMNAZ U
+How to use:
+1. Save this file as index.html.
+2. Open it in Visual Studio Code. To preview live, install the Live Server extension and click "Go Live".
+3. Edit the sections (About, Projects, Contact) as you like.
+
+Contact details already filled:
+Name: SHAMNAZ U
+Email: shamnaazshamna@gmail.com
+Phone: 8088377425
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SHAMNAZ U — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #0f1724;
+      --card: #0b1220;
+      --muted: #9aa4b2;
+      --accent: #6ee7b7; /* soft mint */
+      --glass: rgba(255,255,255,0.04);
+      --glass-2: rgba(255,255,255,0.02);
+      --maxw: 1100px;
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,'Helvetica Neue',Arial;color:#e6eef6;background:linear-gradient(180deg,#071022 0%, #071427 60%);}
+    .container{max-width:var(--maxw);margin:40px auto;padding:28px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{width:54px;height:54px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#60a5fa);display:flex;align-items:center;justify-content:center;font-weight:800;color:#062024}
+    .brand h1{margin:0;font-size:18px;letter-spacing:0.6px}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
+    nav a:hover{color:var(--accent)}
+
+    .hero{display:grid;grid-template-columns:1fr 380px;gap:28px;margin-top:28px;align-items:center}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:16px;padding:28px;box-shadow:0 6px 30px rgba(2,6,23,0.6);backdrop-filter: blur(6px);}
+    .intro h2{margin:0 0 8px 0;font-size:34px}
+    .intro p{margin:0;color:var(--muted);line-height:1.6}
+    .cta{margin-top:18px;display:flex;gap:12px}
+    .btn{padding:10px 14px;border-radius:10px;border:0;font-weight:700;cursor:pointer}
+    .btn-primary{background:linear-gradient(90deg,var(--accent),#7dd3fc);color:#042024}
+    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+
+    .profile{display:flex;flex-direction:column;gap:14px;align-items:center;text-align:center}
+    .portrait{width:160px;height:160px;border-radius:18px;background:linear-gradient(180deg,#0b1228,#061127);display:flex;align-items:center;justify-content:center;font-size:44px;font-weight:800;color:var(--accent);box-shadow:inset 0 -6px 20px rgba(0,0,0,0.6)}
+    .contact-card{width:100%;padding:16px;border-radius:12px;background:var(--card);}
+    .contact-card a{display:block;color:var(--muted);text-decoration:none;margin:6px 0;font-weight:600}
+    .contact-card a:hover{color:var(--accent)}
+
+    .sections{display:grid;grid-template-columns:1fr 340px;gap:28px;margin-top:28px}
+    .projects{display:grid;gap:14px}
+    .project{padding:16px;border-radius:12px;background:var(--glass);}
+    .project h3{margin:0 0 6px 0}
+    .project p{margin:0;color:var(--muted);font-size:14px}
+
+    aside .card{position:sticky;top:28px}
+
+    footer{margin-top:36px;text-align:center;color:var(--muted);font-size:14px;padding:18px}
+
+    /* small screens */
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr;}
+      .sections{grid-template-columns:1fr;}
+      .profile{flex-direction:row;align-items:center;text-align:left}
+      .portrait{width:96px;height:96px;font-size:28px}
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">SU</div>
+        <h1>SHAMNAZ U</h1>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="card intro">
+        <h2>Hi, I'm SHAMNAZ U 👋</h2>
+        <p>I'm a budding web developer and student passionate about building clean, responsive websites and learning modern frontend tools. I enjoy turning ideas into pixel-perfect, accessible interfaces.</p>
+
+        <div class="cta">
+          <a class="btn btn-primary" href="#contact">Contact Me</a>
+          <a class="btn btn-ghost" href="#projects">See Projects</a>
+        </div>
+
+        <div style="margin-top:18px;display:flex;gap:20px;flex-wrap:wrap">
+          <div style="padding:10px;border-radius:12px;background:var(--glass);min-width:160px">
+            <strong>Location</strong>
+            <div style="color:var(--muted);font-size:14px">India</div>
+          </div>
+          <div style="padding:10px;border-radius:12px;background:var(--glass);min-width:160px">
+            <strong>Role</strong>
+            <div style="color:var(--muted);font-size:14px">Front-end / Web Dev</div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="card profile">
+        <div class="portrait">SU</div>
+        <div>
+          <h3 style="margin:8px 0 4px 0">SHAMNAZ U</h3>
+          <div style="color:var(--muted);font-size:14px">Web Developer • Student</div>
+        </div>
+
+        <div class="contact-card" style="margin-top:12px">
+          <a href="mailto:shamnaazshamna@gmail.com">✉ shamnaazshamna@gmail.com</a>
+          <a href="tel:+918088377425">📞 +91 80883 77425</a>
+        </div>
+      </aside>
+    </section>
+
+    <section class="sections">
+      <main>
+        <div id="about" class="card">
+          <h3>About</h3>
+          <p style="color:var(--muted);line-height:1.6">I'm learning web development and building small projects to sharpen my HTML, CSS, and JavaScript skills. I focus on creating responsive, accessible interfaces and enjoy solving UI challenges. Open to collaborations and internships.</p>
+        </div>
+
+        <div id="projects" style="margin-top:18px">
+          <h3 style="color:#cfecef;margin:6px 0 12px 0">Projects</h3>
+          <div class="projects">
+            <div class="project card">
+              <h3>Personal Portfolio (this site)</h3>
+              <p>Single-file responsive portfolio built with modern layout, easy to customize and deploy.</p>
+            </div>
+            <div class="project card">
+              <h3>Todo App</h3>
+              <p>A small JavaScript app to manage tasks with localStorage persistence.</p>
+            </div>
+            <div class="project card">
+              <h3>Landing Page</h3>
+              <p>Static marketing landing page demonstrating responsive grids and form interactions.</p>
+            </div>
+          </div>
+        </div>
+
+      </main>
+
+      <aside>
+        <div class="card">
+          <h3>Quick Contact</h3>
+          <p style="color:var(--muted)">Want to reach out? Use the email or phone below — I usually reply within a few days.</p>
+          <div style="margin-top:12px">
+            <strong>Email</strong>
+            <div style="color:var(--muted);font-size:14px">shamnaazshamna@gmail.com</div>
+          </div>
+          <div style="margin-top:8px">
+            <strong>Phone</strong>
+            <div style="color:var(--muted);font-size:14px">+91 80883 77425</div>
+          </div>
+        </div>
+
+        <div style="height:18px"></div>
+
+        <div class="card">
+          <h3>Skills</h3>
+          <div style="color:var(--muted);font-size:14px;margin-top:8px">HTML • CSS • JavaScript • Responsive Design • Git</div>
+        </div>
+      </aside>
+    </section>
+
+    <footer id="contact">
+      <div style="margin-bottom:8px">Made with ❤ by SHAMNAZ U</div>
+      <div style="color:var(--muted)">Email: shamnaazshamna@gmail.com • Phone: +91 80883 77425</div>
+    </footer>
+  </div>
+
+  <script>
+    // Smooth scroll for nav links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',e=>{
+        const target = document.querySelector(a.getAttribute('href'));
+        if(target){e.preventDefault();target.scrollIntoView({behavior:'smooth',block:'start'});}
+      })
+    })
+  </script>
+</body>
+</html>
